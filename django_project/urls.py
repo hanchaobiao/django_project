@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """django_project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -15,7 +16,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from apps.message import views as message_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^form/$', message_view.getform, name='form_new')
 ]
